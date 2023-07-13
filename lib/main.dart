@@ -2,6 +2,7 @@ import 'package:chat_app/pages/auth/loginpage.dart';
 import 'package:chat_app/pages/auth/registerpage.dart';
 import 'package:chat_app/pages/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get/get.dart';
 
 
@@ -17,11 +18,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final storage = new FlutterSecureStorage();
   @override
   Widget build(BuildContext context) {
     return const  GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Myloginpage(),
+      home: Myhomepage(),
     );
   }
 }
