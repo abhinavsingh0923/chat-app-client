@@ -1,11 +1,5 @@
-
-import 'package:chat_app/models/datamodel.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-
 import '../api requesta/homepage_api_request.dart';
 
 class Myhomepage extends StatefulWidget {
@@ -40,7 +34,7 @@ OpenseaController openseaController = Get.put(OpenseaController());
           
         ),
       ),
-      body:Obx(() => openseaController.isLoading.value ? Center(
+      body:Obx(() => openseaController.isLoading.value ? const Center(
         child: CircularProgressIndicator(),
       ): ListView.builder(
         itemCount: openseaController.Apidata?.data?.length ?? 0,

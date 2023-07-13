@@ -18,7 +18,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final storage = new FlutterSecureStorage();
+  final storage = const FlutterSecureStorage();
   @override
   Widget build(BuildContext context) {
     return const  GetMaterialApp(

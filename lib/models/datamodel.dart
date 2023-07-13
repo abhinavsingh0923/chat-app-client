@@ -1,3 +1,4 @@
+// ignore: camel_case_types
 class apidata {
   int? status;
   List<Data>? data;

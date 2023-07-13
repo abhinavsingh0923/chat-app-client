@@ -5,8 +5,9 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
 class OpenseaController extends GetxController {
-  final storage = new FlutterSecureStorage();
+  final storage = const FlutterSecureStorage();
   var isLoading = false.obs;
+  // ignore: non_constant_identifier_names
   apidata? Apidata;
 
   @override
@@ -31,9 +32,11 @@ class OpenseaController extends GetxController {
 
         Apidata = apidata.fromJson(result);
       } else {
+        // ignore: avoid_print
         print('error fetching data');
       }
     } catch (e) {
+      // ignore: avoid_print
       print('Error while getting data is $e');
     } finally {
       isLoading(false);
